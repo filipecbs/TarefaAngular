@@ -1,0 +1,30 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div style="text-align:center">
+  <h1>
+    {{ title }}!
+  </h1>
+
+  <div class="row">
+    <div class="col s12 m6 l3">
+      <img src="../assets/festajunina_dog.png" alt="dog junino">
+    </div>
+    <div class="col s12 m6 l3">
+      <img src="../assets/glasses_dog.jpg" alt="dog de óculos">
+    </div>
+    <div class="col s12 m6 offset-m6 l3">
+      <img src="../assets/smart_dog.jpg" alt="dog inteligente">
+    </div>
+    <div class="col s12 m6 l3">
+      <img src="../assets/spoilt_dog.jpg" alt="dog mimado">
+    </div>
+  </div>
+  <button mat-button>Click me!</button>
+  <mat-form-field>
+      <input type="text" placeholder="Pick one" matInput [formControl]="myControl" [matAutocomplete]="auto">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option">
+          {{option}}
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+</div>
